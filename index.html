@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fitness Tracker</title>
+    <!-- Font Awesome CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="app">
+        <h1>Fitness Tracker</h1>
+        <div class="inputs">
+            <div>
+                <label for="water">
+                    Water Intake (in ml)
+                </label>
+                <input id="water" type="number">
+            </div>
+            <div>
+                <label for="exercise">
+                    Exercise Duration (in min)
+                </label>
+                <input id="exercise" type="number">
+            </div>
+            <div>
+                <label for="exerciseType">
+                    Exercise Type
+                </label>
+                <select id="exerciseType">
+                    <option value="workout">Workout</option>
+                    <option value="running">Running</option>
+                    <option value="walking">Walking</option>
+                    <option value="swimming">Swimming</option>
+                </select>
+            </div>
+        </div>
+        <button id="submit">Submit</button>
+        <div id="editSection" class="hidden">
+            <button id="cancelEdit" onclick="cancelEdit()">
+                Cancel
+            </button>
+            <button id="updateEntry" onclick="editRow()">
+                Update
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Water Intake <br> (in ml)</th>
+                    <th>Exercise Duration <br> (in min)</th>
+                    <th>Exercise Type</th>
+                    <th>Calories Burned</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="output">
+            </tbody>
+        </table>
+        <div class="app">
+            <h1>Progress Chart</h1>
+            <!-- Your existing code -->
+        
+            <canvas id="progressChart" width="400" height="200"></canvas>
+        
+            <!-- Your existing code -->
+        </div>
+        
+    </div>
+    <!-- Font Awesome JS CDN -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
